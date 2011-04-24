@@ -1,4 +1,5 @@
 FizzbuzzRails::Application.routes.draw do
+  get "computefizzbuzz/:num(.:format)" => "computeFizzBuzz#number"
   get "computefizzbuzz" => "computeFizzBuzz#default"
   
   # The priority is based upon order of creation:

@@ -4,6 +4,14 @@ class ComputeFizzBuzzController < ApplicationController
     (1..100).each {|number| @fizzbuzznumbers << computeFizzBuzz(number)}
   end
   
+  def number
+    @fizzbuzznumber = computeFizzBuzz(params[:num].to_i)
+    respond_to do |format|
+      format.html
+      format.text { render :text => @fizzbuzznumber }
+    end
+  end
+  
   private
   def computeFizzBuzz(number)
     return "FizzBuzz" if 0 == number % 15
