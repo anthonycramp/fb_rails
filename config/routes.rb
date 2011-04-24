@@ -1,4 +1,6 @@
 FizzbuzzRails::Application.routes.draw do
+  get "computefizzbuzz" => "computeFizzBuzz#default"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
